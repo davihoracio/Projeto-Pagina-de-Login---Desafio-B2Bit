@@ -1,73 +1,62 @@
-# React + TypeScript + Vite
+# Desafio Front-end B2Bit
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web de autenticação desenvolvida como parte do processo seletivo para a vaga de Desenvolvedor Front-end na B2Bit.
 
-Currently, two official plugins are available:
+**✨ [Veja o projeto online aqui!](URL_DO_SEU_DEPLOY_AQUI)** 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este projeto foi construído utilizando as seguintes tecnologias:
 
-## Expanding the ESLint configuration
+- **React** (com **Vite**)
+- **TypeScript**
+- **React Router Dom** para roteamento
+- **Axios** para chamadas à API
+- **CSS Modules** para estilização
+- **Vitest** e **React Testing Library** para testes
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 💻 Funcionalidades Implementadas
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- [x] Tela de Login com formulário interativo.
+- [x] Comunicação com a API para autenticação de usuário.
+- [x] Feedback de loading e erro durante o login.
+- [x] Persistência de sessão utilizando `LocalStorage` e Token JWT.
+- [x] Redirecionamento para a página de perfil após login bem-sucedido.
+- [x] Tela de Perfil que busca e exibe os dados do usuário autenticado.
+- [x] Funcionalidade de Logout.
+- [x] Projeto totalmente componentizado seguindo as melhores práticas do React.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Como Rodar o Projeto Localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Para executar este projeto na sua máquina, siga os passos abaixo:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/seu-usuario/b2bit-frontend-challenge.git](https://github.com/seu-usuario/b2bit-frontend-challenge.git)
+    ```
+
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd b2bit-frontend-challenge
+    ```
+
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+
+4.  **Inicie a aplicação:**
+    ```bash
+    npm run dev
+    ```
+    A aplicação estará disponível em `http://localhost:5173`.
+
+**Credenciais para teste:**
+* **Email:** `cliente@youdrive.com`
+* **Senha:** `password`
