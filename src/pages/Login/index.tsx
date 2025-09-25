@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 import styles from './styles.module.css';
 import logoB2Bit from '../../assets/logo-b2bit.png';
 import { Input } from '../../components/Input';
 import { PrimaryButton } from '../../components/PrimaryButton';
+import { api } from '../../services/api';
 
 
 
@@ -27,27 +27,15 @@ export function Login(){
 
         try{
             //Fazer chamada API com axios
-            const response = await axios.post(
-                'https://api.homologation.cliqdrive.com.br/auth/login/',
-                {
-                    email: email,
-                    password: password,
-                },
-                {
-                headers: {
-                    'Accept': 'application/json;version=v1_web',
-                    'Content-Type': 'application/json',
-                }
-                }
+            const response = await api.post(
+                '/auth/login/', //Final do endpoint
+                { email, password }
             );
-            // Código em caso de SUCESSO
-            console.log('Login bem-sucedido!', response.data);
-            // Próximos passos: salvar o token e redirecionar
-            const accessToken = response.data.tokens.access; // Pegar o token de acesso da resposta
 
-            localStorage.setItem('@b2bit.token', accessToken); //Salvar o token no LocalStorage
+            const accessToken = response.data.tokens.access;
+            localStorage.setItem('@b2bit.token', accessToken);
+            navigate('/profile');
 
-            navigate('/profile'); //Redirecionar para a aba "Profile"
          }catch(error){
             //Caso de erro
             console.error('Erro no Login.', error);

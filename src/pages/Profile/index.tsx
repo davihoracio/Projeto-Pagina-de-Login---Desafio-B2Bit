@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import styles from './styles.module.css';
+import { api } from '../../services/api';
 
 import { Header } from '../../components/Header';
 import { ProfileCard } from '../../components/ProfileCard';
@@ -27,12 +27,7 @@ export function Profile() {
         return;
       }
       try {
-        const response = await axios.get('https://api.homologation.cliqdrive.com.br/auth/profile/', {
-          headers: { 
-            'Authorization': `Bearer ${token}`,
-            'Accept': 'application/json;version=v1_web',
-          },
-        });
+        const response = await api.get('/auth/profile/');
         setUserData(response.data);
       } catch (error) {
         console.error("Erro ao buscar dados do perfil:", error);

@@ -2,15 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
 
-// 1. Importamos os componentes que acabamos de criar
+// 1. Importando os componentes que acabei de criar
 import App from './App.tsx';
 import { Login } from './pages/Login/index.tsx';
 import { Profile } from './pages/Profile/index.tsx';
 
-// 2. Importamos nosso CSS global
+// 2. Importando o CSS global
 import './index.css';
+import { PrivateRoute } from './components/PrivateRoute/index.tsx';
 
-// 3. Criamos o nosso "mapa" de rotas
+// 3. Criando o  "mapa" de rotas
 const router = createBrowserRouter([
   {
     path: '/',
@@ -26,13 +27,19 @@ const router = createBrowserRouter([
       },
       {
         path: '/profile',
-        element: <Profile/>
+        element: <PrivateRoute/>, //Adicionando segurança
+        children: [
+          {
+            path: '/profile',
+            element: <Profile/>
+          }
+        ]
       }
     ]
   }
 ]);
 
-// 4. Mandamos o React renderizar nossa aplicação com esse mapa
+// 4. Mandando o React renderizar a aplicação com esse mapa
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router}/>  
