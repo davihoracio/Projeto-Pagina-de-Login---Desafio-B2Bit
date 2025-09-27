@@ -12,7 +12,7 @@
 -   [✨ Funcionalidades Detalhadas](#-funcionalidades-detalhadas)
 -   [🛠️ Tecnologias e Justificativas](#️-tecnologias-e-justificativas)
 -   [🏗️ Arquitetura do Projeto](#️-arquitetura-do-projeto)
--   [🧠 Aprendizados e Desafios](#-aprendizados-e-desafios)
+-   [🧠 Aprendizados](#-aprendizados)
 -   [⚙️ Como Executar](#️-como-executar)
 -   [🔑 Credenciais para Teste](#-credenciais-para-teste)
 
@@ -97,7 +97,7 @@ O código foi estruturado seguindo o princípio da **separação de responsabili
 ```
 ---
 
-### 🧠 Aprendizados 
+### 🧠 Aprendizados
 
 Este projeto solidificou conhecimentos em:
 -   **Consumo de APIs REST:** Implementação de requisições `GET` e `POST` e manipulação das respostas.
