@@ -4,7 +4,7 @@
 
 ---
 
-### **[🚀 Acessar a Aplicação Online](https://pagina-de-login-davi-b2bit.vercel.app/login)**
+### **[🚀 Clique aqui para acessar a Aplicação Online](https://pagina-de-login-davi-b2bit.vercel.app/login)**
 
 ### 📋 Índice
 
@@ -58,24 +58,45 @@ Este projeto foi desenvolvido para atender ao desafio técnico para a vaga de De
 | **React Router Dom** | Biblioteca escolhida para gerenciar o roteamento no lado do cliente, incluindo a implementação de rotas privadas. |
 
 ---
-
 ### 🏗️ Arquitetura do Projeto
 
-O código foi estruturado de forma a separar as responsabilidades, facilitando a manutenção e escalabilidade:
+O código foi estruturado seguindo o princípio da **separação de responsabilidades (Separation of Concerns)**, visando criar uma base de código modular, de fácil manutenção e escalabilidade. A organização das pastas reflete essa abordagem:
 
+```text
 /src
-|-- /assets         # Imagens e outros arquivos estáticos
-|-- /components     # Componentes reutilizáveis
-|   |-- /ui         # Componentes base do shadcn/ui
-|   |-- InfoField/  # Componente para exibir campos de informação
-|   -- PrivateRoute/ # Componente de ordem superior para proteger rotas |-- /lib            # Funções utilitárias (ex: cn) |-- /pages          # Componentes que representam as páginas da aplicação |   |-- Login/ |   -- Profile/
-|-- /services       # Configuração da comunicação com APIs
-|   -- api.tsx     # Instância e interceptors do Axios |-- App.tsx         # Componente raiz com a definição do Outlet do roteador -- main.tsx        # Ponto de entrada da aplicação, onde as rotas são definidas
-
-
+|
+|-- 📂 assets/
+|   # Armazena recursos estáticos como imagens e logos.
+|
+|-- 📂 components/
+|   |-- 🧩 ui/
+|   |   # Componentes de UI puros e reutilizáveis (Button, Card, Input), seguindo a filosofia shadcn/ui.
+|   |-- 🧩 InfoField/
+|   |   # Componente de domínio específico para exibir pares de label/valor no perfil.
+|   `-- 🧩 PrivateRoute/
+|       # Um Higher-Order Component (HOC) que encapsula a lógica de proteção de rotas.
+|
+|-- 📂 lib/
+|   # Contém funções utilitárias, como a função `cn` para mesclar classes do Tailwind CSS.
+|
+|-- 📂 pages/
+|   # Cada pasta representa uma página completa da aplicação, contendo sua própria lógica e estado.
+|   |-- Login/
+|   `-- Profile/
+|
+|-- 📂 services/
+|   # Centraliza toda a comunicação com serviços externos.
+|   `-- api.tsx
+|       # Configuração da instância do Axios, incluindo a baseURL e os interceptors para autenticação.
+|
+|-- 📄 App.tsx
+|   # Componente raiz que renderiza o layout principal e o `<Outlet />` do React Router.
+|
+`-- 📄 main.tsx
+    # Ponto de entrada da aplicação, onde o React é montado no DOM e o roteador é configurado.
 ---
 
-### 🧠 Aprendizados e Desafios
+### 🧠 Aprendizados 
 
 Este projeto solidificou conhecimentos em:
 -   **Consumo de APIs REST:** Implementação de requisições `GET` e `POST` e manipulação das respostas.
@@ -83,7 +104,6 @@ Este projeto solidificou conhecimentos em:
 -   **Autenticação baseada em Token:** Entendimento prático do fluxo de login, armazenamento de token e envio em requisições subsequentes.
 -   **Boas Práticas:** Criação de uma arquitetura limpa e componentizada.
 
-O principal desafio foi garantir que o fluxo de autenticação fosse seguro e que a experiência do usuário fosse fluida, com feedbacks claros em cada etapa do processo.
 
 ---
 
