@@ -62,7 +62,7 @@ Este projeto foi desenvolvido para atender ao desafio técnico para a vaga de De
 
 O código foi estruturado seguindo o princípio da **separação de responsabilidades (Separation of Concerns)**, visando criar uma base de código modular, de fácil manutenção e escalabilidade. A organização das pastas reflete essa abordagem:
 
-```text
+```
 /src
 |
 |-- 📂 assets/
@@ -93,7 +93,8 @@ O código foi estruturado seguindo o princípio da **separação de responsabili
 |   # Componente raiz que renderiza o layout principal e o `<Outlet />` do React Router.
 |
 `-- 📄 main.tsx
-    # Ponto de entrada da aplicação, onde o React é montado no DOM e o roteador é configurado.
+    # Ponto de entrada da aplicação, onde o React é montado no DOM e o roteador é configurado. 
+```
 ---
 
 ### 🧠 Aprendizados 
