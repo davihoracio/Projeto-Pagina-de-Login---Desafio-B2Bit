@@ -1,8 +1,0 @@
-.header {
-  background-color: white;
-  padding: 1.25rem 5%; /* 20px */
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
