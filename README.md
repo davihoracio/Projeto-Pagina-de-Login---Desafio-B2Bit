@@ -144,9 +144,3 @@ A aplicação estará disponível para acesso no seu navegador, geralmente no en
 -   **Email:** `cliente@youdrive.com`
 -   **Senha:** `password`
 
----
-
-### 🔑 Credenciais para Teste
-
--   **Email:** `cliente@youdrive.com`
--   **Senha:** `password`
